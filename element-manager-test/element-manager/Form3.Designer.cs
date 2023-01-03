@@ -283,6 +283,7 @@
             this.panelInf.Name = "panelInf";
             this.panelInf.Size = new System.Drawing.Size(802, 550);
             this.panelInf.TabIndex = 5;
+            this.panelInf.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInf_Paint);
             // 
             // Main
             // 
@@ -302,6 +303,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
+
         }
 
 

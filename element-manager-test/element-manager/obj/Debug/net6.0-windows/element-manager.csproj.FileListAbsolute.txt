@@ -85,3 +85,4 @@ C:\Users\406\source\element-manager-test\element-manager\obj\Debug\net6.0-window
 C:\Users\406\source\element-manager-test\element-manager\obj\Debug\net6.0-windows\element-manager.pdb
 C:\Users\406\source\element-manager-test\element-manager\obj\Debug\net6.0-windows\element-manager.genruntimeconfig.cache
 C:\Users\406\source\element-manager-test\element-manager\obj\Debug\net6.0-windows\ref\element-manager.dll
+C:\Users\406\source\element-manager-test\element-manager\obj\Debug\net6.0-windows\element_manager.Search.resources

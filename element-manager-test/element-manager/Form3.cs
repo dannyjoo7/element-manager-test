@@ -13,7 +13,7 @@ namespace element_manager
     public partial class Main : Form
     {
         public static readonly UserUpdate Uesrupdate = new UserUpdate();
-
+        public static readonly Search Search = new Search();
 
         public Main()
         {
@@ -25,7 +25,11 @@ namespace element_manager
             Uesrupdate.TopLevel = false;
             Uesrupdate.TopMost = true;
             Uesrupdate.FormBorderStyle = FormBorderStyle.None;
-            
+
+            Search.TopLevel = false;
+            Search.TopMost = true;
+            Search.FormBorderStyle = FormBorderStyle.None;
+
         }
 
         private void minButton_Click(object sender, EventArgs e)
@@ -48,13 +52,7 @@ namespace element_manager
 
         }
 
-        private void Search_Ib_Click(object sender, EventArgs e)
-        {
-            Search_Btn.BackColor= Color.White;
-            SearchCategory_Btn.BackColor = Color.DarkGray;
-            UesrMod_Btn.BackColor = Color.DarkGray;
-            Setting_Btn.BackColor = Color.DarkGray;
-        }
+       
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -66,6 +64,19 @@ namespace element_manager
 
         }
 
+        private void Search_Ib_Click(object sender, EventArgs e)
+        {
+            Search_Btn.BackColor = Color.White;
+            SearchCategory_Btn.BackColor = Color.DarkGray;
+            UesrMod_Btn.BackColor = Color.DarkGray;
+            Setting_Btn.BackColor = Color.DarkGray;
+
+            panelInf.Controls.Add(Search);
+            Search.Show();
+
+            Uesrupdate.Hide();
+        }
+
         private void UesrMod_Btn_Click(object sender, EventArgs e)
         {
             Search_Btn.BackColor = Color.DarkGray;
@@ -75,6 +86,8 @@ namespace element_manager
 
             panelInf.Controls.Add(Uesrupdate);
             Uesrupdate.Show();
+
+            Search.Hide();
         }
 
         private void SearchCategory_Btn_Click(object sender, EventArgs e)
@@ -91,6 +104,11 @@ namespace element_manager
             SearchCategory_Btn.BackColor = Color.DarkGray;
             UesrMod_Btn.BackColor = Color.DarkGray;
             Setting_Btn.BackColor = Color.White;
+        }
+
+        private void panelInf_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
