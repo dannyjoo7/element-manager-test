@@ -12,6 +12,9 @@
   <ItemGroup>
     <PackageReference Include="FontAwesome.Sharp" Version="6.2.1" />
     <PackageReference Include="MySql.Data" Version="8.0.31" />
+    <PackageReference Include="Syncfusion.Grid.Windows" Version="20.4.0.42" />
+    <PackageReference Include="Syncfusion.Shared.Base" Version="20.4.0.42" />
+    <PackageReference Include="Syncfusion.Tools.Windows" Version="20.4.0.42" />
   </ItemGroup>
 
   <ItemGroup>
