@@ -267,7 +267,7 @@
             this.Search_Btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.Search_Btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.Search_Btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Search_Btn.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Search_Btn.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Search_Btn.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.Search_Btn.IconColor = System.Drawing.Color.Black;
             this.Search_Btn.IconFont = FontAwesome.Sharp.IconFont.Auto;

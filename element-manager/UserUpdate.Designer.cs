@@ -275,7 +275,6 @@
             this.btnUpdateConfirm.AllowDrop = true;
             this.btnUpdateConfirm.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnUpdateConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnUpdateConfirm.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.btnUpdateConfirm.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnUpdateConfirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
             this.btnUpdateConfirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGray;
