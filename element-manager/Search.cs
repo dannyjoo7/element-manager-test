@@ -12,6 +12,7 @@ namespace element_manager
 {
     public partial class Search : Form
     {
+
         public Search()
         {
             InitializeComponent();

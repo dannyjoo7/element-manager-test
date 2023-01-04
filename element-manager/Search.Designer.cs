@@ -30,7 +30,7 @@
         {
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.textUpdateName = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboSearch = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,23 +53,32 @@
             // 
             // textUpdateName
             // 
-            this.textUpdateName.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textUpdateName.Font = new System.Drawing.Font("맑은 고딕", 18.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textUpdateName.Location = new System.Drawing.Point(40, 0);
             this.textUpdateName.Name = "textUpdateName";
-            this.textUpdateName.Size = new System.Drawing.Size(610, 39);
+            this.textUpdateName.Size = new System.Drawing.Size(610, 40);
             this.textUpdateName.TabIndex = 14;
             this.textUpdateName.Text = "검색어 입력";
             this.textUpdateName.TextChanged += new System.EventHandler(this.textUpdateName_TextChanged);
             // 
-            // comboBox1
+            // comboSearch
             // 
-            this.comboBox1.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(650, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(150, 40);
-            this.comboBox1.TabIndex = 15;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboSearch.Font = new System.Drawing.Font("맑은 고딕", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboSearch.FormattingEnabled = true;
+            this.comboSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboSearch.Items.AddRange(new object[] {
+            "제목",
+            "게시자",
+            "회사명",
+            "태그명"});
+            this.comboSearch.Location = new System.Drawing.Point(650, 0);
+            this.comboSearch.Name = "comboSearch";
+            this.comboSearch.Size = new System.Drawing.Size(150, 40);
+            this.comboSearch.TabIndex = 15;
+            this.comboSearch.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboSearch.SelectedIndex = 0;
             // 
             // Search
             // 
@@ -77,7 +86,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 550);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboSearch);
             this.Controls.Add(this.textUpdateName);
             this.Controls.Add(this.iconPictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -94,6 +103,6 @@
 
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private TextBox textUpdateName;
-        private ComboBox comboBox1;
+        private ComboBox comboSearch;
     }
 }
