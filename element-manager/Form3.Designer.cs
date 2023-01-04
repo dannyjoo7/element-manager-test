@@ -207,7 +207,7 @@
             this.Setting_Btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Setting_Btn.IconSize = 35;
             this.Setting_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Setting_Btn.Location = new System.Drawing.Point(12, 183);
+            this.Setting_Btn.Location = new System.Drawing.Point(9, 176);
             this.Setting_Btn.Name = "Setting_Btn";
             this.Setting_Btn.Padding = new System.Windows.Forms.Padding(5, 5, 0, 0);
             this.Setting_Btn.Size = new System.Drawing.Size(180, 50);
@@ -229,7 +229,7 @@
             this.UesrMod_Btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.UesrMod_Btn.IconSize = 35;
             this.UesrMod_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UesrMod_Btn.Location = new System.Drawing.Point(12, 127);
+            this.UesrMod_Btn.Location = new System.Drawing.Point(9, 120);
             this.UesrMod_Btn.Name = "UesrMod_Btn";
             this.UesrMod_Btn.Padding = new System.Windows.Forms.Padding(5, 5, 0, 0);
             this.UesrMod_Btn.Size = new System.Drawing.Size(180, 50);
@@ -251,7 +251,7 @@
             this.SearchCategory_Btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.SearchCategory_Btn.IconSize = 35;
             this.SearchCategory_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SearchCategory_Btn.Location = new System.Drawing.Point(12, 71);
+            this.SearchCategory_Btn.Location = new System.Drawing.Point(9, 64);
             this.SearchCategory_Btn.Name = "SearchCategory_Btn";
             this.SearchCategory_Btn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.SearchCategory_Btn.Size = new System.Drawing.Size(180, 50);
@@ -273,7 +273,7 @@
             this.Search_Btn.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.Search_Btn.IconSize = 35;
             this.Search_Btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Search_Btn.Location = new System.Drawing.Point(12, 15);
+            this.Search_Btn.Location = new System.Drawing.Point(9, 8);
             this.Search_Btn.Name = "Search_Btn";
             this.Search_Btn.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.Search_Btn.Size = new System.Drawing.Size(180, 50);
