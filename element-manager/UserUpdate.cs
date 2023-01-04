@@ -12,7 +12,6 @@ namespace element_manager
 {
     public partial class UserUpdate : Form
     {
-        public static readonly UserResign UseResign = new UserResign();
 
         public UserUpdate()
         {
@@ -81,7 +80,9 @@ namespace element_manager
 
         private void signUpLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            UseResign.Show();
+            UserResign UseResign = new UserResign();
+
+            UseResign.ShowDialog();
         }
 
         private void btnFindAdr_Click(object sender, EventArgs e)

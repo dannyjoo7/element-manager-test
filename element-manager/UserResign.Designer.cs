@@ -66,6 +66,7 @@
             this.panel1.Size = new System.Drawing.Size(350, 50);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // iconButton4
             // 
@@ -94,6 +95,7 @@
             this.iconPictureBox2.Size = new System.Drawing.Size(32, 31);
             this.iconPictureBox2.TabIndex = 9;
             this.iconPictureBox2.TabStop = false;
+            this.iconPictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.iconPictureBox2_MouseDown_1);
             // 
             // iconButton5
             // 
@@ -204,6 +206,7 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Element Manager";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             // 
             // iconButton3
             // 

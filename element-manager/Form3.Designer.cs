@@ -286,7 +286,7 @@
             // 
             this.panelInf.Location = new System.Drawing.Point(198, 50);
             this.panelInf.Name = "panelInf";
-            this.panelInf.Size = new System.Drawing.Size(802, 550);
+            this.panelInf.Size = new System.Drawing.Size(800, 550);
             this.panelInf.TabIndex = 5;
             this.panelInf.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInf_Paint);
             // 
