@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Button btnPrev;
-            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection1 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
-            Syncfusion.Windows.Forms.Tools.ResetButton resetButton1 = new Syncfusion.Windows.Forms.Tools.ResetButton();
+            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection13 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
+            Syncfusion.Windows.Forms.Tools.ResetButton resetButton13 = new Syncfusion.Windows.Forms.Tools.ResetButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelElementName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,6 +42,8 @@
             this.linkSite = new System.Windows.Forms.LinkLabel();
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.rating = new Syncfusion.Windows.Forms.Tools.RatingControl();
+            this.labelInfo = new System.Windows.Forms.Label();
+            this.textMemo = new System.Windows.Forms.TextBox();
             btnPrev = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -130,7 +132,6 @@
             this.labelId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelId.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.labelId.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labelId.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.labelId.Location = new System.Drawing.Point(636, 12);
             this.labelId.Name = "labelId";
             this.labelId.Size = new System.Drawing.Size(80, 45);
@@ -171,19 +172,46 @@
             // 
             // rating
             // 
-            this.rating.Images = customImageCollection1;
+            this.rating.Images = customImageCollection13;
             this.rating.Location = new System.Drawing.Point(636, 154);
             this.rating.Name = "rating";
-            this.rating.ResetButton = resetButton1;
+            this.rating.ResetButton = resetButton13;
             this.rating.Size = new System.Drawing.Size(145, 28);
             this.rating.TabIndex = 38;
             this.rating.Text = "ratingControl1";
+            // 
+            // labelInfo
+            // 
+            this.labelInfo.AutoSize = true;
+            this.labelInfo.Font = new System.Drawing.Font("맑은 고딕", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.labelInfo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.labelInfo.Location = new System.Drawing.Point(15, 199);
+            this.labelInfo.MaximumSize = new System.Drawing.Size(400, 400);
+            this.labelInfo.Name = "labelInfo";
+            this.labelInfo.Size = new System.Drawing.Size(396, 68);
+            this.labelInfo.TabIndex = 39;
+            this.labelInfo.Text = "커넥츠 프랩 공시관은 관리형 독학관 답게 학습 수준 및 시기에 따른 맞춤형 커리큘럼을 제공한다. 공시를 시작하는 수험생을 위한 개념 학습부터 이미" +
+    " 기초 학습이 완료된 수험생을 위한 심화/핵심 이론 커리큘럼을 제공한다.";
+            this.labelInfo.Click += new System.EventHandler(this.label2_Click_2);
+            // 
+            // textMemo
+            // 
+            this.textMemo.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textMemo.Location = new System.Drawing.Point(437, 196);
+            this.textMemo.Multiline = true;
+            this.textMemo.Name = "textMemo";
+            this.textMemo.Size = new System.Drawing.Size(350, 342);
+            this.textMemo.TabIndex = 40;
+            this.textMemo.Text = "Memo";
+            this.textMemo.TextChanged += new System.EventHandler(this.textIntro_TextChanged);
             // 
             // ElementPublisher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 550);
+            this.Controls.Add(this.textMemo);
+            this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.rating);
             this.Controls.Add(this.linkSite);
             this.Controls.Add(this.labelTag);
@@ -219,5 +247,7 @@
         private LinkLabel linkSite;
         private MySql.Data.MySqlClient.MySqlDataAdapter mySqlDataAdapter1;
         private Syncfusion.Windows.Forms.Tools.RatingControl rating;
+        private Label labelInfo;
+        private TextBox textMemo;
     }
 }

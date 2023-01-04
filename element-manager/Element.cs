@@ -56,5 +56,15 @@ namespace element_manager
         {
 
         }
+
+        private void label2_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textIntro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
