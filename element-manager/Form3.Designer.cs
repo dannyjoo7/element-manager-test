@@ -35,6 +35,7 @@
             this.SignUplabel = new System.Windows.Forms.Label();
             this.maxButton = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.signUpLink = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +44,7 @@
             this.SearchCategory_Btn = new FontAwesome.Sharp.IconButton();
             this.Search_Btn = new FontAwesome.Sharp.IconButton();
             this.panelInf = new System.Windows.Forms.Panel();
+            this.btnPermit = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
@@ -139,6 +141,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.Controls.Add(this.btnPermit);
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.iconPictureBox1);
             this.panel2.Controls.Add(this.signUpLink);
             this.panel2.Controls.Add(this.label2);
@@ -151,6 +155,14 @@
             this.panel2.Size = new System.Drawing.Size(200, 550);
             this.panel2.TabIndex = 4;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkGray;
+            this.panel3.Location = new System.Drawing.Point(4, 231);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(192, 2);
+            this.panel3.TabIndex = 29;
             // 
             // iconPictureBox1
             // 
@@ -290,6 +302,27 @@
             this.panelInf.TabIndex = 5;
             this.panelInf.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInf_Paint);
             // 
+            // btnPermit
+            // 
+            this.btnPermit.BackColor = System.Drawing.Color.DarkGray;
+            this.btnPermit.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPermit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.btnPermit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btnPermit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPermit.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPermit.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnPermit.IconColor = System.Drawing.Color.Black;
+            this.btnPermit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPermit.IconSize = 35;
+            this.btnPermit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPermit.Location = new System.Drawing.Point(10, 239);
+            this.btnPermit.Name = "btnPermit";
+            this.btnPermit.Padding = new System.Windows.Forms.Padding(5, 5, 0, 0);
+            this.btnPermit.Size = new System.Drawing.Size(180, 50);
+            this.btnPermit.TabIndex = 30;
+            this.btnPermit.Text = "   운용자 가입 승인";
+            this.btnPermit.UseVisualStyleBackColor = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -329,5 +362,7 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private Panel panelInf;
+        private Panel panel3;
+        private FontAwesome.Sharp.IconButton btnPermit;
     }
 }
