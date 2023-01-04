@@ -12,17 +12,19 @@ namespace element_manager
 {
     public partial class UserUpdate : Form
     {
+        public static readonly UserResign UseResign = new UserResign();
+
         public UserUpdate()
         {
             InitializeComponent();
         }
 
-        private void iconPictureBox2_Click(object sender, EventArgs e)
+        private void UserUpdate_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void UserUpdate_Load(object sender, EventArgs e)
+        private void iconPictureBox2_Click(object sender, EventArgs e)
         {
 
         }
@@ -79,7 +81,7 @@ namespace element_manager
 
         private void signUpLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            UseResign.Show();
         }
 
         private void btnFindAdr_Click(object sender, EventArgs e)

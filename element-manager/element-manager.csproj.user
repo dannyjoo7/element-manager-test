@@ -17,6 +17,9 @@
     <Compile Update="Search.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="UserResign.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UserUpdate.cs">
       <SubType>Form</SubType>
     </Compile>

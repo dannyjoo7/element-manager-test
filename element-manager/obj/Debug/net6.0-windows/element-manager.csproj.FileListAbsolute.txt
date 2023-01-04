@@ -149,3 +149,5 @@ C:\Users\sdw19\Documents\element-manager-test\element-manager\obj\Debug\net6.0-w
 C:\Users\sdw19\Documents\element-manager-test\element-manager\obj\Debug\net6.0-windows\element-manager.pdb
 C:\Users\sdw19\Documents\element-manager-test\element-manager\obj\Debug\net6.0-windows\element-manager.genruntimeconfig.cache
 C:\Users\sdw19\Documents\element-manager-test\element-manager\obj\Debug\net6.0-windows\ref\element-manager.dll
+C:\Users\406\source\element-manager-test\element-manager\obj\Debug\net6.0-windows\element_manager.contactUs.resources
+C:\Users\406\source\element-manager-test\element-manager\obj\Debug\net6.0-windows\element_manager.UserResign.resources
