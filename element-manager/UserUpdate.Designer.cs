@@ -48,12 +48,10 @@
             this.signUpLink = new System.Windows.Forms.LinkLabel();
             this.btnUpdatePw = new System.Windows.Forms.Button();
             this.btnUpdateConfirm = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -288,17 +286,6 @@
             this.btnUpdateConfirm.UseVisualStyleBackColor = false;
             this.btnUpdateConfirm.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(556, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 27);
-            this.label4.TabIndex = 42;
-            this.label4.Text = "회원 상태";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -339,15 +326,6 @@
             this.textBox3.Size = new System.Drawing.Size(125, 35);
             this.textBox3.TabIndex = 44;
             // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox4.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(641, 116);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(125, 35);
-            this.textBox4.TabIndex = 45;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -366,10 +344,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 550);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnUpdateConfirm);
@@ -424,12 +400,10 @@
         private LinkLabel signUpLink;
         private Button btnUpdatePw;
         private Button btnUpdateConfirm;
-        private Label label4;
         private Label label5;
         private Label label6;
         private TextBox textBox2;
         private TextBox textBox3;
-        private TextBox textBox4;
         private Label label7;
     }
 }
