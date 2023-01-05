@@ -34,6 +34,7 @@ namespace element_manager
             
         }
 
+        //창 조절
         private void minButton_Click(object sender, EventArgs e)
         {
 
@@ -54,8 +55,6 @@ namespace element_manager
 
         }
 
-       
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
@@ -68,13 +67,14 @@ namespace element_manager
 
         private void Search_Ib_Click(object sender, EventArgs e)
         {
+            //검색 버튼
             changeColorBtnBackground(Search_Btn);
-
             changeForm(Search);
         }
 
         private void UesrMod_Btn_Click(object sender, EventArgs e)
         {
+            //유저 정보 수정 버튼
             changeColorBtnBackground(UesrMod_Btn);
             changeForm(Uesrupdate);
         }
@@ -170,13 +170,13 @@ namespace element_manager
             listForm.Add(Uesrupdate);
             listForm.Add(Search);
 
-            panelInf.Controls.Add(form);
-
             for (int i = 0; i < listForm.Count; i++)
             {
                 listForm[i].Hide();
+                panelInf.Controls.Remove(listForm[i]);
             }
 
+            panelInf.Controls.Add(form);
             form.Show();
         }
 
