@@ -28,91 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picture = new System.Windows.Forms.PictureBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblCompany = new System.Windows.Forms.Label();
+            this.btnInfo = new System.Windows.Forms.Button();
+            this.btnPermit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // picture
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(94, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picture.BackColor = System.Drawing.Color.Transparent;
+            this.picture.Location = new System.Drawing.Point(10, 10);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(80, 80);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture.TabIndex = 0;
+            this.picture.TabStop = false;
+            this.picture.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label1
+            // lblName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(103, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "홍길동";
+            this.lblName.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblName.Location = new System.Drawing.Point(118, 15);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(564, 25);
+            this.lblName.TabIndex = 1;
+            this.lblName.Text = "username";
             // 
-            // label2
+            // lblCompany
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.label2.Location = new System.Drawing.Point(107, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "스마일테크놀로지";
+            this.lblCompany.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.lblCompany.Location = new System.Drawing.Point(121, 46);
+            this.lblCompany.Name = "lblCompany";
+            this.lblCompany.Size = new System.Drawing.Size(560, 15);
+            this.lblCompany.TabIndex = 2;
+            this.lblCompany.Text = "company";
             // 
-            // button1
+            // btnInfo
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(601, 74);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Info";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Location = new System.Drawing.Point(617, 74);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(75, 23);
+            this.btnInfo.TabIndex = 3;
+            this.btnInfo.Text = "Info";
+            this.btnInfo.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnPermit
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(682, 74);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "승인";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnPermit.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPermit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPermit.Location = new System.Drawing.Point(698, 74);
+            this.btnPermit.Name = "btnPermit";
+            this.btnPermit.Size = new System.Drawing.Size(75, 23);
+            this.btnPermit.TabIndex = 4;
+            this.btnPermit.Text = "승인";
+            this.btnPermit.UseVisualStyleBackColor = false;
+            this.btnPermit.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Teal;
+            this.panel1.Controls.Add(this.picture);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(100, 100);
+            this.panel1.TabIndex = 5;
             // 
             // UserList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnPermit);
+            this.Controls.Add(this.btnInfo);
+            this.Controls.Add(this.lblCompany);
+            this.Controls.Add(this.lblName);
             this.Name = "UserList";
-            this.Size = new System.Drawing.Size(760, 100);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(776, 100);
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private Label label1;
-        private Label label2;
-        private Button button1;
-        private Button button2;
+        private PictureBox picture;
+        private Label lblName;
+        private Label lblCompany;
+        private Button btnInfo;
+        private Button btnPermit;
+        private Panel panel1;
     }
 }
