@@ -237,7 +237,7 @@
             this.btnFindAdr.Name = "btnFindAdr";
             this.btnFindAdr.Size = new System.Drawing.Size(80, 29);
             this.btnFindAdr.TabIndex = 36;
-            this.btnFindAdr.Text = "중복 확인";
+            this.btnFindAdr.Text = "주소 검색";
             this.btnFindAdr.UseVisualStyleBackColor = false;
             this.btnFindAdr.Click += new System.EventHandler(this.btnFindAdr_Click);
             // 
