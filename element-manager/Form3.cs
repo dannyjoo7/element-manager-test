@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 
 namespace element_manager
@@ -15,6 +17,8 @@ namespace element_manager
     {
         public static readonly UserUpdate Uesrupdate = new UserUpdate();
         public static readonly Search Search = new Search();
+        public static readonly AddTag AddTag = new AddTag();
+        
 
         public Main()
         {
@@ -31,6 +35,7 @@ namespace element_manager
             Search.TopMost = true;
             Search.FormBorderStyle = FormBorderStyle.None;
 
+            
         }
 
         private void minButton_Click(object sender, EventArgs e)
@@ -67,10 +72,7 @@ namespace element_manager
 
         private void Search_Ib_Click(object sender, EventArgs e)
         {
-            Search_Btn.BackColor = Color.White;
-            SearchCategory_Btn.BackColor = Color.DarkGray;
-            UesrMod_Btn.BackColor = Color.DarkGray;
-            Setting_Btn.BackColor = Color.DarkGray;
+            changeColorBtnBackground(Search_Btn);
 
             panelInf.Controls.Add(Search);
             Search.Show();
@@ -80,10 +82,7 @@ namespace element_manager
 
         private void UesrMod_Btn_Click(object sender, EventArgs e)
         {
-            Search_Btn.BackColor = Color.DarkGray;
-            SearchCategory_Btn.BackColor = Color.DarkGray;
-            UesrMod_Btn.BackColor = Color.White;
-            Setting_Btn.BackColor = Color.DarkGray;
+            changeColorBtnBackground(UesrMod_Btn);
 
             panelInf.Controls.Add(Uesrupdate);
             Uesrupdate.Show();
@@ -93,18 +92,12 @@ namespace element_manager
 
         private void SearchCategory_Btn_Click(object sender, EventArgs e)
         {
-            Search_Btn.BackColor = Color.DarkGray;
-            SearchCategory_Btn.BackColor = Color.White;
-            UesrMod_Btn.BackColor = Color.DarkGray;
-            Setting_Btn.BackColor = Color.DarkGray;
+            changeColorBtnBackground(SearchCategory_Btn);
         }
 
         private void Setting_Btn_Click(object sender, EventArgs e)
         {
-            Search_Btn.BackColor = Color.DarkGray;
-            SearchCategory_Btn.BackColor = Color.DarkGray;
-            UesrMod_Btn.BackColor = Color.DarkGray;
-            Setting_Btn.BackColor = Color.White;
+            changeColorBtnBackground(Setting_Btn);
         }
 
         private void panelInf_Paint(object sender, PaintEventArgs e)
@@ -145,6 +138,33 @@ namespace element_manager
         {
             contactUs contactUs = new contactUs();
             contactUs.ShowDialog();
+        }
+
+        private void btnAddTag_Click(object sender, EventArgs e)
+        {
+            changeColorBtnBackground(btnAddTag);
+        }
+
+        private void changeColorBtnBackground(IconButton obj)
+        {
+            List<IconButton> listBtn = new List<IconButton>();
+            listBtn.Add(Search_Btn);
+            listBtn.Add(SearchCategory_Btn);
+            listBtn.Add(UesrMod_Btn);
+            listBtn.Add(Setting_Btn);
+            listBtn.Add(btnPermit);
+            listBtn.Add(btnAddTag);
+
+            for (int i = 0; i < listBtn.Count; i++)
+            {
+                listBtn[i].BackColor = Color.DarkGray;
+            }
+            obj.BackColor = Color.White;
+        }
+
+        private void btnPermit_Click(object sender, EventArgs e)
+        {
+            changeColorBtnBackground(btnPermit);
         }
     }
 }
