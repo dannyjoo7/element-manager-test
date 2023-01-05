@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using Org.BouncyCastle.Asn1.Cmp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,14 +28,9 @@ namespace element_manager
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            Uesrupdate.TopLevel = false;
-            Uesrupdate.TopMost = true;
-            Uesrupdate.FormBorderStyle = FormBorderStyle.None;
-
-            Search.TopLevel = false;
-            Search.TopMost = true;
-            Search.FormBorderStyle = FormBorderStyle.None;
-
+            loadForm(Uesrupdate);
+            loadForm(Search);
+            loadForm(AddTag);
             
         }
 
@@ -74,20 +70,13 @@ namespace element_manager
         {
             changeColorBtnBackground(Search_Btn);
 
-            panelInf.Controls.Add(Search);
-            Search.Show();
-
-            Uesrupdate.Hide();
+            changeForm(Search);
         }
 
         private void UesrMod_Btn_Click(object sender, EventArgs e)
         {
             changeColorBtnBackground(UesrMod_Btn);
-
-            panelInf.Controls.Add(Uesrupdate);
-            Uesrupdate.Show();
-
-            Search.Hide();
+            changeForm(Uesrupdate);
         }
 
         private void SearchCategory_Btn_Click(object sender, EventArgs e)
@@ -98,6 +87,17 @@ namespace element_manager
         private void Setting_Btn_Click(object sender, EventArgs e)
         {
             changeColorBtnBackground(Setting_Btn);
+        }
+
+        private void btnAddTag_Click(object sender, EventArgs e)
+        {
+            changeColorBtnBackground(btnAddTag);
+            changeForm(AddTag);
+        }
+
+        private void btnPermit_Click(object sender, EventArgs e)
+        {
+            changeColorBtnBackground(btnPermit);
         }
 
         private void panelInf_Paint(object sender, PaintEventArgs e)
@@ -116,6 +116,7 @@ namespace element_manager
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        //창 위치 변경
         private void panel1_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -128,11 +129,15 @@ namespace element_manager
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+
+
         private void iconPictureBox2_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        
 
         private void signUpLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -140,14 +145,10 @@ namespace element_manager
             contactUs.ShowDialog();
         }
 
-        private void btnAddTag_Click(object sender, EventArgs e)
-        {
-            changeColorBtnBackground(btnAddTag);
-        }
-
         private void changeColorBtnBackground(IconButton obj)
         {
             List<IconButton> listBtn = new List<IconButton>();
+
             listBtn.Add(Search_Btn);
             listBtn.Add(SearchCategory_Btn);
             listBtn.Add(UesrMod_Btn);
@@ -162,9 +163,29 @@ namespace element_manager
             obj.BackColor = Color.White;
         }
 
-        private void btnPermit_Click(object sender, EventArgs e)
+        private void changeForm(Form form)
         {
-            changeColorBtnBackground(btnPermit);
+            List<Form> listForm = new List<Form>();
+            listForm.Add(AddTag);
+            listForm.Add(Uesrupdate);
+            listForm.Add(Search);
+
+            panelInf.Controls.Add(form);
+
+            for (int i = 0; i < listForm.Count; i++)
+            {
+                listForm[i].Hide();
+            }
+
+            form.Show();
         }
+
+        private void loadForm(Form form)
+        {
+            form.TopLevel = false;
+            form.TopMost = true;
+            form.FormBorderStyle = FormBorderStyle.None;
+        }
+
     }
 }
