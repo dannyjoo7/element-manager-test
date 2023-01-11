@@ -16,6 +16,7 @@ namespace element_manager
         public Search()
         {
             InitializeComponent();
+            populateItems();
         }
 
         private void Search_Load(object sender, EventArgs e)
@@ -41,6 +42,22 @@ namespace element_manager
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void populateItems()
+        {
+            SearchElement[] elementList = new SearchElement[20];
+            for (int i = 0; i < elementList.Length; i++)
+            {
+                elementList[i] = new SearchElement();
+                // to-do
+                //if (flowLayoutPanel1.Controls.Count > 0)
+                //{
+                //    flowLayoutPanel1.Controls.Clear();
+                //}
+                //else
+                searchPanel.Controls.Add(elementList[i]);
+            }
         }
     }
 }

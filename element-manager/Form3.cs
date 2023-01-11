@@ -21,7 +21,6 @@ namespace element_manager
         public static readonly AddTag AddTag = new AddTag();
         public static readonly UserPermit UserPermit = new UserPermit();
         
-
         public Main()
         {
             InitializeComponent();

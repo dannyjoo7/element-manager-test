@@ -32,6 +32,7 @@
             this.textUpdateName = new System.Windows.Forms.TextBox();
             this.comboSearch = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.searchPanel = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -43,10 +44,10 @@
             this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
             this.iconPictureBox2.IconColor = System.Drawing.Color.Black;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.iconPictureBox2.IconSize = 28;
+            this.iconPictureBox2.IconSize = 30;
             this.iconPictureBox2.Location = new System.Drawing.Point(0, 0);
             this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(34, 28);
+            this.iconPictureBox2.Size = new System.Drawing.Size(34, 30);
             this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.iconPictureBox2.TabIndex = 11;
             this.iconPictureBox2.TabStop = false;
@@ -89,12 +90,24 @@
             this.panel1.Size = new System.Drawing.Size(34, 28);
             this.panel1.TabIndex = 16;
             // 
+            // searchPanel
+            // 
+            this.searchPanel.AutoScroll = true;
+            this.searchPanel.BackColor = System.Drawing.Color.White;
+            this.searchPanel.Location = new System.Drawing.Point(0, 30);
+            this.searchPanel.Margin = new System.Windows.Forms.Padding(1);
+            this.searchPanel.Name = "searchPanel";
+            this.searchPanel.Padding = new System.Windows.Forms.Padding(10);
+            this.searchPanel.Size = new System.Drawing.Size(800, 520);
+            this.searchPanel.TabIndex = 17;
+            // 
             // Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(800, 550);
+            this.Controls.Add(this.searchPanel);
             this.Controls.Add(this.textUpdateName);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboSearch);
@@ -115,5 +128,6 @@
         private TextBox textUpdateName;
         private ComboBox comboSearch;
         private Panel panel1;
+        private FlowLayoutPanel searchPanel;
     }
 }
