@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 namespace element_manager
 {
@@ -46,8 +47,51 @@ namespace element_manager
 
         private void loginBtn_Click(object sender, EventArgs e)
         {
-            Main.Show();
-            this.Hide();
+            try
+            {
+                //DB연결 정보
+                string myConnection = "Server = 127.0.0.1; Port=3306; Database=pbl; Uid=root; Pwd=1234;";
+                //연결문 선언
+                MySqlConnection myConn = new MySqlConnection(myConnection);
+
+
+                myConn.Open();
+                string sql = "select * from user where user_id = '" + textID.Text + "' and user_pw = '" + textPW.Text + "';";
+
+                MySqlCommand cmd = new MySqlCommand(sql, myConn);
+                MySqlDataReader myReader = cmd.ExecuteReader();
+                int count = 0;
+
+                //SQL문이 돌아서 몇개의 데이터가 검사됬는가?
+                while (myReader.Read())
+                {
+                    count = count + 1;
+                }
+
+                if (count == 1)
+                {
+                    myConn.Close();
+                    this.Hide();
+                    //emp = textID.Text;
+
+                    Main.sessid(textID.Text);
+                    Main.Show();
+                }
+                else if (count > 1)
+                {
+                    MessageBox.Show("아이디와 패스워드가 중복됩니다.");
+                    myConn.Close();
+                }
+                else
+                {
+                    MessageBox.Show("아이디와 패스워드가 불일치합니다.");
+                    myConn.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
