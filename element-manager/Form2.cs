@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace element_manager
 {
@@ -15,17 +16,14 @@ namespace element_manager
     {
         public static readonly Form1 Login = new Form1();
         public static readonly Form2 SignUp = new Form2();
+        string gender;
 
         public Form2()
         {
             InitializeComponent();
         }
 
-        private void loginBtn_Click(object sender, EventArgs e)
-        {
-            Login.Show();
-            this.Hide();
-        }
+        
 
         private void closeButton_Click(object sender, EventArgs e)
         {
@@ -48,6 +46,67 @@ namespace element_manager
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void SU_man_rb_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = "man";
+        }
+
+        private void SU_woman_rb_CheckedChanged(object sender, EventArgs e)
+        {
+            gender = "woman";
+        }
+
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            if ((SU_ID_text.Text.Length == 0) || 
+                (SU_Pw_text.Text.Length == 0) || 
+                (SU_Name_text.Text.Length == 0) || 
+                (SU_Email_text.Text.Length == 0) || 
+                (SU_Phone_text.Text.Length == 0) || 
+                (SU_Addr_text.Text.Length == 0))
+            {
+                MessageBox.Show("빈 항목이 존재합니다");
+            }
+            else
+            {
+                if (SU_Pw_text.Text != SU_VerPw_text.Text)
+                {
+                    MessageBox.Show("비밀번호가 다릅니다");
+                }
+                else
+                {
+                    try
+                    {
+                        string myConnection = "Server = 127.0.0.1; Port=3306; Database=pbl; Uid=root; Pwd=1234;";
+                        MySqlConnection myConn = new MySqlConnection(myConnection);
+                        myConn.Open();
+
+                        string sql = "INSERT INTO user (user_name, user_id, user_pw, user_sex, user_email, user_phone, user_addr, introduce, op_check, user_state) " +
+                            "VALUES('" + SU_Name_text.Text +
+                            "', '" + SU_ID_text.Text +
+                            "', '" + SU_Pw_text.Text +
+                            "', '" + gender +
+                            "', '" + SU_Email_text.Text +
+                            "', '" + SU_Phone_text.Text +
+                            "', '" + SU_Addr_text.Text +
+                            "', '', '1', '정상');";
+
+                        MySqlCommand cmd = new MySqlCommand(sql, myConn);
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("회원가입에 성공하였습니다");
+                        Login.Show();
+                        this.Hide();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
         }
     }
 }
