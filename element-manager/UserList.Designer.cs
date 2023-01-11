@@ -70,7 +70,7 @@
             // btnInfo
             // 
             this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Location = new System.Drawing.Point(617, 74);
+            this.btnInfo.Location = new System.Drawing.Point(597, 70);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(75, 23);
             this.btnInfo.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             this.btnPermit.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPermit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPermit.Location = new System.Drawing.Point(698, 74);
+            this.btnPermit.Location = new System.Drawing.Point(678, 70);
             this.btnPermit.Name = "btnPermit";
             this.btnPermit.Size = new System.Drawing.Size(75, 23);
             this.btnPermit.TabIndex = 4;
@@ -103,13 +103,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnPermit);
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.lblCompany);
             this.Controls.Add(this.lblName);
             this.Name = "UserList";
-            this.Size = new System.Drawing.Size(776, 100);
+            this.Size = new System.Drawing.Size(760, 100);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

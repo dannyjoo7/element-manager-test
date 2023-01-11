@@ -37,7 +37,7 @@ namespace element_manager
         }
 
         [Category("Custom props")]
-        private Image Pic
+        public Image Pic
         {
             get { return _pic; }
             set { _pic = value; picture.Image = value; }

@@ -16,9 +16,10 @@ namespace element_manager
 {
     public partial class Main : Form
     {
-        public static readonly UserUpdate Uesrupdate = new UserUpdate();
+        public static readonly UserUpdate UserUpdate = new UserUpdate();
         public static readonly Search Search = new Search();
         public static readonly AddTag AddTag = new AddTag();
+        public static readonly UserPermit UserPermit = new UserPermit();
         
 
         public Main()
@@ -28,10 +29,10 @@ namespace element_manager
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            loadForm(Uesrupdate);
+            loadForm(UserUpdate);
             loadForm(Search);
             loadForm(AddTag);
-            
+            loadForm(UserPermit);
         }
 
         //창 조절
@@ -76,7 +77,7 @@ namespace element_manager
         {
             //유저 정보 수정 버튼
             changeColorBtnBackground(UesrMod_Btn);
-            changeForm(Uesrupdate);
+            changeForm(UserUpdate);
         }
 
         private void SearchCategory_Btn_Click(object sender, EventArgs e)
@@ -98,6 +99,7 @@ namespace element_manager
         private void btnPermit_Click(object sender, EventArgs e)
         {
             changeColorBtnBackground(btnPermit);
+            changeForm(UserPermit);
         }
 
         private void panelInf_Paint(object sender, PaintEventArgs e)
@@ -167,8 +169,9 @@ namespace element_manager
         {
             List<Form> listForm = new List<Form>();
             listForm.Add(AddTag);
-            listForm.Add(Uesrupdate);
+            listForm.Add(UserUpdate);
             listForm.Add(Search);
+            listForm.Add(UserPermit);
 
             for (int i = 0; i < listForm.Count; i++)
             {
