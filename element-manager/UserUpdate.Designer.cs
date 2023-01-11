@@ -37,21 +37,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.textIntro = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.SU_man_rb = new System.Windows.Forms.RadioButton();
+            this.rbFemale = new System.Windows.Forms.RadioButton();
+            this.rbMale = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.textUpdatePhone = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textUpdateAddr = new System.Windows.Forms.TextBox();
             this.btnFindAdr = new System.Windows.Forms.Button();
             this.signUpLink = new System.Windows.Forms.LinkLabel();
             this.btnUpdatePw = new System.Windows.Forms.Button();
             this.btnUpdateConfirm = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textOp = new System.Windows.Forms.TextBox();
+            this.textState = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -98,6 +98,7 @@
             // textUpdateId
             // 
             this.textUpdateId.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textUpdateId.Enabled = false;
             this.textUpdateId.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textUpdateId.Location = new System.Drawing.Point(206, 51);
             this.textUpdateId.Name = "textUpdateId";
@@ -152,30 +153,30 @@
             this.panel2.Size = new System.Drawing.Size(500, 2);
             this.panel2.TabIndex = 28;
             // 
-            // radioButton1
+            // rbFemale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButton1.Location = new System.Drawing.Point(425, 336);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(58, 28);
-            this.radioButton1.TabIndex = 31;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "여자";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rbFemale.AutoSize = true;
+            this.rbFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbFemale.Location = new System.Drawing.Point(425, 336);
+            this.rbFemale.Name = "rbFemale";
+            this.rbFemale.Size = new System.Drawing.Size(58, 28);
+            this.rbFemale.TabIndex = 31;
+            this.rbFemale.TabStop = true;
+            this.rbFemale.Text = "여자";
+            this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // SU_man_rb
+            // rbMale
             // 
-            this.SU_man_rb.AutoSize = true;
-            this.SU_man_rb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SU_man_rb.Location = new System.Drawing.Point(325, 336);
-            this.SU_man_rb.Name = "SU_man_rb";
-            this.SU_man_rb.Size = new System.Drawing.Size(58, 28);
-            this.SU_man_rb.TabIndex = 30;
-            this.SU_man_rb.TabStop = true;
-            this.SU_man_rb.Text = "남자";
-            this.SU_man_rb.UseVisualStyleBackColor = true;
+            this.rbMale.AutoSize = true;
+            this.rbMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rbMale.Location = new System.Drawing.Point(325, 336);
+            this.rbMale.Name = "rbMale";
+            this.rbMale.Size = new System.Drawing.Size(58, 28);
+            this.rbMale.TabIndex = 30;
+            this.rbMale.TabStop = true;
+            this.rbMale.Text = "남자";
+            this.rbMale.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -219,14 +220,14 @@
             this.label3.Text = "주소";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // textUpdateAddr
             // 
-            this.textBox1.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(163, 424);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 27);
-            this.textBox1.TabIndex = 34;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.textUpdateAddr.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textUpdateAddr.Location = new System.Drawing.Point(163, 424);
+            this.textUpdateAddr.Name = "textUpdateAddr";
+            this.textUpdateAddr.Size = new System.Drawing.Size(240, 27);
+            this.textUpdateAddr.TabIndex = 34;
+            this.textUpdateAddr.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // btnFindAdr
             // 
@@ -308,23 +309,25 @@
             this.label6.Text = "회원 유형";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox2
+            // textOp
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox2.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(641, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 35);
-            this.textBox2.TabIndex = 43;
+            this.textOp.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textOp.Enabled = false;
+            this.textOp.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textOp.Location = new System.Drawing.Point(641, 16);
+            this.textOp.Name = "textOp";
+            this.textOp.Size = new System.Drawing.Size(125, 35);
+            this.textOp.TabIndex = 43;
             // 
-            // textBox3
+            // textState
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.textBox3.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(641, 69);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 35);
-            this.textBox3.TabIndex = 44;
+            this.textState.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textState.Enabled = false;
+            this.textState.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textState.Location = new System.Drawing.Point(641, 69);
+            this.textState.Name = "textState";
+            this.textState.Size = new System.Drawing.Size(125, 35);
+            this.textState.TabIndex = 44;
             // 
             // label7
             // 
@@ -344,8 +347,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 550);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textState);
+            this.Controls.Add(this.textOp);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnUpdateConfirm);
@@ -353,11 +356,11 @@
             this.Controls.Add(this.signUpLink);
             this.Controls.Add(this.btnFindAdr);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textUpdateAddr);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textUpdatePhone);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.SU_man_rb);
+            this.Controls.Add(this.rbFemale);
+            this.Controls.Add(this.rbMale);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.textIntro);
@@ -389,21 +392,21 @@
         private Panel panel1;
         private TextBox textIntro;
         private Panel panel2;
-        private RadioButton radioButton1;
-        private RadioButton SU_man_rb;
+        private RadioButton rbFemale;
+        private RadioButton rbMale;
         private Label label1;
         private TextBox textUpdatePhone;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox textUpdateAddr;
         private Button btnFindAdr;
         private LinkLabel signUpLink;
         private Button btnUpdatePw;
         private Button btnUpdateConfirm;
         private Label label5;
         private Label label6;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox textOp;
+        private TextBox textState;
         private Label label7;
     }
 }

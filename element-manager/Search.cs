@@ -17,6 +17,7 @@ namespace element_manager
         {
             InitializeComponent();
             populateItems();
+            comboSearch.SelectedIndex = 0;
         }
 
         private void Search_Load(object sender, EventArgs e)

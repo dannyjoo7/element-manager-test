@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,52 @@ namespace element_manager
 {
     public partial class UserUpdate : Form
     {
-
-
         public UserUpdate()
         {
             InitializeComponent();
+        }
+        
+        // Database에서 회원정보 불러오기
+        public void showUser(string id)
+        {
+            Console.WriteLine("[SYS] showUser 호출, ID:" + id);
+            try
+            {
+                string myConnection = "Server = 127.0.0.1; Port=3306; Database=pbl; Uid=root; Pwd=1234;";
+                MySqlConnection myConn = new MySqlConnection(myConnection);
+
+                myConn.Open();
+                string sql = "select * from user where user_id='" + id + "';";
+                MySqlCommand cmd = new MySqlCommand(sql, myConn);
+                MySqlDataReader table = cmd.ExecuteReader();
+
+                Console.WriteLine("[SYS] 회원정보 조회: MySQL 연결 성공");
+                while (table.Read())
+                {
+                    textUpdateId.Text = id;
+                    string? user_name = table["user_name"].ToString();
+                    textUpdateName.Text = user_name;
+                    string? user_sex = table["user_sex"].ToString();
+                    if (user_sex == "man")
+                        rbMale.Checked = true;
+                    else
+                        rbFemale.Checked = true;
+                    string? user_email = table["user_email"].ToString();
+                    textUpdateEmail.Text = user_email;
+                    string? user_phone = table["user_phone"].ToString();
+                    textUpdatePhone.Text = user_phone;
+                    string? user_addr = table["user_addr"].ToString();
+                    textUpdateAddr.Text = user_addr;
+                    string? introduce = table["introduce"].ToString();
+                    textIntro.Text = introduce;
+                    int op_check = (int)table["op_check"]; // 1: 사용자, 2: 운용자
+                    textOp.Text = (op_check == 1) ? "사용자" : "운용자";
+                    string? user_state = table["user_state"].ToString();
+                    textState.Text = user_state;
+                }
+            }
+            catch (Exception) {}
+            
         }
 
         private void UserUpdate_Load(object sender, EventArgs e)

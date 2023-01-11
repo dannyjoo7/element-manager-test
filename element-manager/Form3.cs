@@ -25,6 +25,7 @@ namespace element_manager
         public void sessid(string id)
         {
             sid = id;
+            UserUpdate.showUser(id);
         }
 
         public Main()

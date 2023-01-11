@@ -16,7 +16,7 @@ namespace element_manager
     {
         public static readonly Form1 Login = new Form1();
         public static readonly Form2 SignUp = new Form2();
-        string gender;
+        string gender = "man";
 
         public Form2()
         {

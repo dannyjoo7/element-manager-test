@@ -26,7 +26,7 @@ namespace element_manager
 
         private void maxButton_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace element_manager
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void signUpLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -68,12 +68,12 @@ namespace element_manager
                     count = count + 1;
                 }
 
-                if (count == 1)
+                if (count == 1) // login 성공
                 {
                     myConn.Close();
                     this.Hide();
                     //emp = textID.Text;
-
+                    Console.WriteLine("[SYS]로그인 완료");
                     Main.sessid(textID.Text);
                     Main.Show();
                 }
