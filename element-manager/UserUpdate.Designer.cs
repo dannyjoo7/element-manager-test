@@ -88,22 +88,26 @@
             // 
             // textUpdateName
             // 
-            this.textUpdateName.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textUpdateName.Location = new System.Drawing.Point(206, 10);
+            this.textUpdateName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textUpdateName.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textUpdateName.Location = new System.Drawing.Point(206, 13);
             this.textUpdateName.Name = "textUpdateName";
-            this.textUpdateName.Size = new System.Drawing.Size(200, 35);
+            this.textUpdateName.Size = new System.Drawing.Size(200, 27);
             this.textUpdateName.TabIndex = 13;
+            this.textUpdateName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textUpdateName.TextChanged += new System.EventHandler(this.SU_ID_text_TextChanged);
             // 
             // textUpdateId
             // 
-            this.textUpdateId.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textUpdateId.BackColor = System.Drawing.Color.Gainsboro;
+            this.textUpdateId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textUpdateId.Enabled = false;
-            this.textUpdateId.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textUpdateId.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textUpdateId.Location = new System.Drawing.Point(206, 51);
             this.textUpdateId.Name = "textUpdateId";
-            this.textUpdateId.Size = new System.Drawing.Size(290, 35);
+            this.textUpdateId.Size = new System.Drawing.Size(290, 27);
             this.textUpdateId.TabIndex = 14;
+            this.textUpdateId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textUpdateId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // SignUp_Btn
@@ -120,10 +124,11 @@
             // 
             // textUpdateEmail
             // 
-            this.textUpdateEmail.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textUpdateEmail.Location = new System.Drawing.Point(206, 89);
+            this.textUpdateEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textUpdateEmail.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textUpdateEmail.Location = new System.Drawing.Point(206, 92);
             this.textUpdateEmail.Name = "textUpdateEmail";
-            this.textUpdateEmail.Size = new System.Drawing.Size(290, 35);
+            this.textUpdateEmail.Size = new System.Drawing.Size(290, 27);
             this.textUpdateEmail.TabIndex = 25;
             this.textUpdateEmail.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -137,7 +142,8 @@
             // 
             // textIntro
             // 
-            this.textIntro.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textIntro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textIntro.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textIntro.Location = new System.Drawing.Point(12, 133);
             this.textIntro.Multiline = true;
             this.textIntro.Name = "textIntro";
@@ -192,11 +198,13 @@
             // 
             // textUpdatePhone
             // 
-            this.textUpdatePhone.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textUpdatePhone.Location = new System.Drawing.Point(315, 374);
+            this.textUpdatePhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textUpdatePhone.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textUpdatePhone.Location = new System.Drawing.Point(316, 380);
             this.textUpdatePhone.Name = "textUpdatePhone";
-            this.textUpdatePhone.Size = new System.Drawing.Size(180, 35);
+            this.textUpdatePhone.Size = new System.Drawing.Size(180, 27);
             this.textUpdatePhone.TabIndex = 32;
+            this.textUpdatePhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label2
             // 
@@ -222,11 +230,13 @@
             // 
             // textUpdateAddr
             // 
+            this.textUpdateAddr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textUpdateAddr.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textUpdateAddr.Location = new System.Drawing.Point(163, 424);
             this.textUpdateAddr.Name = "textUpdateAddr";
             this.textUpdateAddr.Size = new System.Drawing.Size(240, 27);
             this.textUpdateAddr.TabIndex = 34;
+            this.textUpdateAddr.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textUpdateAddr.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // btnFindAdr
@@ -291,7 +301,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(521, 74);
+            this.label5.Location = new System.Drawing.Point(526, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 27);
             this.label5.TabIndex = 41;
@@ -302,7 +312,7 @@
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(536, 23);
+            this.label6.Location = new System.Drawing.Point(540, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(76, 27);
             this.label6.TabIndex = 40;
@@ -311,23 +321,27 @@
             // 
             // textOp
             // 
-            this.textOp.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textOp.BackColor = System.Drawing.Color.Gainsboro;
+            this.textOp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textOp.Enabled = false;
-            this.textOp.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textOp.Location = new System.Drawing.Point(641, 16);
+            this.textOp.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textOp.Location = new System.Drawing.Point(641, 14);
             this.textOp.Name = "textOp";
-            this.textOp.Size = new System.Drawing.Size(125, 35);
+            this.textOp.Size = new System.Drawing.Size(125, 27);
             this.textOp.TabIndex = 43;
+            this.textOp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textState
             // 
-            this.textState.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.textState.BackColor = System.Drawing.Color.Gainsboro;
+            this.textState.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textState.Enabled = false;
-            this.textState.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textState.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textState.Location = new System.Drawing.Point(641, 69);
             this.textState.Name = "textState";
-            this.textState.Size = new System.Drawing.Size(125, 35);
+            this.textState.Size = new System.Drawing.Size(125, 27);
             this.textState.TabIndex = 44;
+            this.textState.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label7
             // 
