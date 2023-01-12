@@ -53,6 +53,9 @@
             this.textOp = new System.Windows.Forms.TextBox();
             this.textState = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +67,7 @@
             this.iconPictureBox2.IconColor = System.Drawing.SystemColors.HotTrack;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconPictureBox2.IconSize = 84;
-            this.iconPictureBox2.Location = new System.Drawing.Point(52, 12);
+            this.iconPictureBox2.Location = new System.Drawing.Point(23, 12);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(117, 84);
             this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -78,7 +81,7 @@
             this.Upload_Btn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.Upload_Btn.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.Upload_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Upload_Btn.Location = new System.Drawing.Point(65, 102);
+            this.Upload_Btn.Location = new System.Drawing.Point(36, 102);
             this.Upload_Btn.Name = "Upload_Btn";
             this.Upload_Btn.Size = new System.Drawing.Size(90, 25);
             this.Upload_Btn.TabIndex = 12;
@@ -295,7 +298,7 @@
             this.btnUpdateConfirm.TabIndex = 39;
             this.btnUpdateConfirm.Text = "정보 수정";
             this.btnUpdateConfirm.UseVisualStyleBackColor = false;
-            this.btnUpdateConfirm.Click += new System.EventHandler(this.button1_Click);
+            this.btnUpdateConfirm.Click += new System.EventHandler(this.btnUpdateConfirm_Click);
             // 
             // label5
             // 
@@ -354,12 +357,48 @@
             this.label7.TabIndex = 46;
             this.label7.Text = "Joined in 2022. 10. 17";
             // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(146, 12);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 27);
+            this.label4.TabIndex = 47;
+            this.label4.Text = "Name";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(146, 50);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 27);
+            this.label8.TabIndex = 48;
+            this.label8.Text = "ID";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(146, 91);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 27);
+            this.label9.TabIndex = 49;
+            this.label9.Text = "Email";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UserUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 550);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textState);
             this.Controls.Add(this.textOp);
@@ -387,7 +426,6 @@
             this.Controls.Add(this.iconPictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UserUpdate";
-            this.Text = "UserUpdate";
             this.Load += new System.EventHandler(this.UserUpdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -422,5 +460,8 @@
         private TextBox textOp;
         private TextBox textState;
         private Label label7;
+        private Label label4;
+        private Label label8;
+        private Label label9;
     }
 }

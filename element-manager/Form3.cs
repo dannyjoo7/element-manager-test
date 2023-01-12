@@ -20,6 +20,7 @@ namespace element_manager
         public static readonly Search Search = new Search();
         public static readonly AddTag AddTag = new AddTag();
         public static readonly UserPermit UserPermit = new UserPermit();
+        public static readonly ElementPublisher ElementPublisher = new ElementPublisher();
         string sid;
 
         public void sessid(string id)
@@ -31,6 +32,9 @@ namespace element_manager
         public Main()
         {
             InitializeComponent();
+            ElementPublisher.main = this;
+            Search.main = this;
+            Search.populateItems();
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -39,6 +43,7 @@ namespace element_manager
             loadForm(Search);
             loadForm(AddTag);
             loadForm(UserPermit);
+            loadForm(ElementPublisher);
         }
 
         //창 조절
@@ -171,13 +176,14 @@ namespace element_manager
             obj.BackColor = Color.White;
         }
 
-        private void changeForm(Form form)
+        public void changeForm(Form form)
         {
             List<Form> listForm = new List<Form>();
             listForm.Add(AddTag);
             listForm.Add(UserUpdate);
             listForm.Add(Search);
             listForm.Add(UserPermit);
+            listForm.Add(ElementPublisher);
 
             for (int i = 0; i < listForm.Count; i++)
             {
@@ -195,6 +201,17 @@ namespace element_manager
             form.TopMost = true;
             form.FormBorderStyle = FormBorderStyle.None;
         }
+        
+        // Element 클릭했을 때 Element 세부 페이지로 이동
+        public void viewElement(int eid)
+        {
+            // ElementPublisher.getElement(eid); // Element ID로 데이터 로드
+            changeForm(ElementPublisher); // 화면 이동
+        }
 
+        public void changeToSearch()
+        {
+            changeForm(Search);
+        }
     }
 }

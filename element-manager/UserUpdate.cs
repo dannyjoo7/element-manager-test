@@ -1,13 +1,4 @@
 ﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace element_manager
 {
@@ -113,12 +104,7 @@ namespace element_manager
 
         private void btn_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void signUpLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -136,6 +122,42 @@ namespace element_manager
         private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUpdateConfirm_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string user_s;
+                if (rbMale.Checked == true)
+                    user_s = "man";
+                else
+                    user_s = "woman";
+
+
+                string myConnection = "Server = 127.0.0.1; Port=3306; Database=pbl; Uid=root; Pwd=1234;";
+                MySqlConnection myConn = new MySqlConnection(myConnection);
+
+                myConn.Open();
+                string sql = "UPDATE user SET " +
+                    "user_name = '" + textUpdateName.Text +
+                    "', user_email = '" + textUpdateEmail.Text +
+                    "', introduce = '" + textIntro.Text +
+                    "', user_sex = '" + user_s +
+                    "', user_addr = '" + textUpdateAddr.Text +
+                    "', user_phone = '" + textUpdatePhone.Text +
+                    "' WHERE user_id = '" + textUpdateId.Text + "';";
+
+                MySqlCommand cmd = new MySqlCommand(sql, myConn);
+                cmd.ExecuteReader();
+
+                MessageBox.Show("변경되었습니다.");
+                showUser(textUpdateId.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

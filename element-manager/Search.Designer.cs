@@ -113,7 +113,7 @@
             this.Controls.Add(this.comboSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Search";
-            this.Text = "Search";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.Search_Load);
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);

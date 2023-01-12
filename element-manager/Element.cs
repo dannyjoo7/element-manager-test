@@ -12,6 +12,7 @@ namespace element_manager
 {
     public partial class ElementPublisher : Form
     {
+        public Main main;
         public ElementPublisher()
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace element_manager
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            main.changeToSearch();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -65,6 +66,11 @@ namespace element_manager
         private void textIntro_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        public void getElement(int eid)
+        {
+            labelId.Text = eid.ToString();
         }
     }
 }

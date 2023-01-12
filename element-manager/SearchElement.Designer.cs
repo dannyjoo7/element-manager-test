@@ -44,6 +44,7 @@
             this.lblTag.Size = new System.Drawing.Size(128, 14);
             this.lblTag.TabIndex = 7;
             this.lblTag.Text = "tag1, tag2, tag3, tag4";
+            this.lblTag.Click += new System.EventHandler(this.lblTag_Click);
             // 
             // lblDescription
             // 
@@ -53,6 +54,7 @@
             this.lblDescription.Size = new System.Drawing.Size(624, 64);
             this.lblDescription.TabIndex = 6;
             this.lblDescription.Text = "This is element introduction example.";
+            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
             // 
             // lblName
             // 
@@ -62,6 +64,7 @@
             this.lblName.Size = new System.Drawing.Size(625, 23);
             this.lblName.TabIndex = 5;
             this.lblName.Text = "Element";
+            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // pic
             // 
@@ -71,6 +74,7 @@
             this.pic.Size = new System.Drawing.Size(120, 120);
             this.pic.TabIndex = 4;
             this.pic.TabStop = false;
+            this.pic.Click += new System.EventHandler(this.pic_Click);
             // 
             // SearchElement
             // 
