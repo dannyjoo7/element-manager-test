@@ -21,50 +21,34 @@ namespace element_manager
             InitializeComponent();
         }
 
-        public void getele(int i)
-        {
-            try
-            {
-                string myConnection = "Server = 127.0.0.1; Port=3306; Database=pbl; Uid=root; Pwd=1234;";
-                MySqlConnection myConn = new MySqlConnection(myConnection);
-
-                myConn.Open();
-                string sql = "select * from element where ele_id = " + i + ";";
-                MySqlCommand cmd = new MySqlCommand(sql, myConn);
-                MySqlDataReader table = cmd.ExecuteReader();
-
-                while (table.Read())
-                {
-                    string? ele_name = table["ele_name"].ToString();
-                    lblName.Text = ele_name;
-
-                    string? ele_intro = table["ele_exp"].ToString();
-                    lblDescription.Text = ele_intro;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
         #region Properties
-        private string _name;
+        private string _elename;
         private string _description;
+        private string _eletag;
         private Image _picture;
 
-        public string Name
+        [Category("Custom props")]
+        public string Elename
         {
-            get { return _name; }
-            set { _name = value; lblName.Text = value; }
+            get { return _elename; }
+            set { _elename = value; lblName.Text = value; }
         }
 
+        [Category("Custom props")]
         public string Description
         {
             get { return _description; }
             set { _description = value; lblDescription.Text = value; }
         }
 
+        [Category("Custom props")]
+        public string Eletag
+        {
+            get { return _eletag; }
+            set { _eletag = value; lblTag.Text = value; }
+        }
+
+        [Category("Custom props")]
         public Image Picture
         {
             get { return _picture; }

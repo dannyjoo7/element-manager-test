@@ -65,12 +65,19 @@ namespace element_manager
 
         private void textIntro_TextChanged(object sender, EventArgs e)
         {
-
+            btnConfirm.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            // btnConfirm.BackColor = System.Drawing.Color.Transparent;
         }
 
         public void getElement(int eid)
         {
             labelId.Text = eid.ToString();
+            
+        }
+
+        private void rating_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

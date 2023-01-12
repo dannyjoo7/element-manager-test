@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Button btnPrev;
-            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection13 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
-            Syncfusion.Windows.Forms.Tools.ResetButton resetButton13 = new Syncfusion.Windows.Forms.Tools.ResetButton();
+            Syncfusion.Windows.Forms.Tools.CustomImageCollection customImageCollection1 = new Syncfusion.Windows.Forms.Tools.CustomImageCollection();
+            Syncfusion.Windows.Forms.Tools.ResetButton resetButton1 = new Syncfusion.Windows.Forms.Tools.ResetButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelElementName = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -44,6 +44,7 @@
             this.rating = new Syncfusion.Windows.Forms.Tools.RatingControl();
             this.labelInfo = new System.Windows.Forms.Label();
             this.textMemo = new System.Windows.Forms.TextBox();
+            this.btnConfirm = new System.Windows.Forms.Button();
             btnPrev = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -172,13 +173,14 @@
             // 
             // rating
             // 
-            this.rating.Images = customImageCollection13;
+            this.rating.Images = customImageCollection1;
             this.rating.Location = new System.Drawing.Point(636, 154);
             this.rating.Name = "rating";
-            this.rating.ResetButton = resetButton13;
+            this.rating.ResetButton = resetButton1;
             this.rating.Size = new System.Drawing.Size(145, 28);
             this.rating.TabIndex = 38;
             this.rating.Text = "ratingControl1";
+            this.rating.Click += new System.EventHandler(this.rating_Click);
             // 
             // labelInfo
             // 
@@ -197,19 +199,31 @@
             // textMemo
             // 
             this.textMemo.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textMemo.Location = new System.Drawing.Point(437, 196);
+            this.textMemo.Location = new System.Drawing.Point(437, 198);
             this.textMemo.Multiline = true;
             this.textMemo.Name = "textMemo";
-            this.textMemo.Size = new System.Drawing.Size(350, 342);
+            this.textMemo.Size = new System.Drawing.Size(350, 314);
             this.textMemo.TabIndex = 40;
             this.textMemo.Text = "Memo";
             this.textMemo.TextChanged += new System.EventHandler(this.textIntro_TextChanged);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.Transparent;
+            this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConfirm.Location = new System.Drawing.Point(706, 518);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(82, 23);
+            this.btnConfirm.TabIndex = 41;
+            this.btnConfirm.Text = "메모 수정";
+            this.btnConfirm.UseVisualStyleBackColor = false;
             // 
             // ElementPublisher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 550);
+            this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.textMemo);
             this.Controls.Add(this.labelInfo);
             this.Controls.Add(this.rating);
@@ -249,5 +263,6 @@
         private Syncfusion.Windows.Forms.Tools.RatingControl rating;
         private Label labelInfo;
         private TextBox textMemo;
+        private Button btnConfirm;
     }
 }

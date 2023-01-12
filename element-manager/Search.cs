@@ -60,31 +60,48 @@ namespace element_manager
 
             try
             {
+                List<SearchElement> mylist = new List<SearchElement>();
                 //DB연결 정보
-                string myConnection = "Server = 127.0.0.1; Port=3306; Database=pbl; Uid=root; Pwd=1234;";
-                //연결문 선언
-                MySqlConnection myConn = new MySqlConnection(myConnection);
-
-                myConn.Open();
-                string sql = "select * from element order by ele_id;";
-
-                MySqlCommand cmd = new MySqlCommand(sql, myConn);
-                MySqlDataReader myReader = cmd.ExecuteReader();
-                int count = 0;
-                while (myReader.Read())
+                using (MySqlConnection Conn = new MySqlConnection("Server = 127.0.0.1; Port=3306; Database=pbl; Uid=root; Pwd=1234;"))
                 {
-                    //
-                    count = count + 1;
+                    Conn.Open();
+                    string sql = "select ele_name, ele_exp, ele_id from element;";
+                    MySqlCommand cmd = new MySqlCommand(sql, Conn);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            SearchElement element = new SearchElement();
+                            element.Elename = reader.GetString(0);
+                            element.Description = reader.GetString(1);
+                            element.eid = reader.GetInt32(2);
+                            Console.WriteLine(element.eid);
+                            mylist.Add(element);
+                        }
+                        reader.Close();
+                    }
                 }
-                elementList = new SearchElement[count];
-                for (int i = 0; i < count; i++)
+                using (MySqlConnection Conn = new MySqlConnection("Server = 127.0.0.1; Port=3306; Database=pbl; Uid=root; Pwd=1234;"))
                 {
-                    int j = i + 1;
-                    elementList[i] = new SearchElement();
-                    elementList[i].main = main;
-                    elementList[i].getele(j);
-                    elementList[i].eid = i;
-                    searchPanel.Controls.Add(elementList[i]);
+                    Conn.Open();
+                    foreach (SearchElement ele in mylist)
+                    {
+                        string tag = "";
+                        string sql = "select tag_name from tag inner join eletag on tag.tag_id = eletag.tag_id where ele_id = " + ele.eid + ";";
+                        MySqlCommand cmd = new MySqlCommand(sql, Conn);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                tag += reader.GetString(0) + ", ";
+                            }
+                            // ele.Eletag = tag;
+                            ele.Eletag = tag.Substring(0, tag.Length-2);
+                            searchPanel.Controls.Add(ele);
+                            reader.Close();
+                        }
+                    }
+                    Conn.Close();
                 }
             }
             catch (Exception ex)
