@@ -97,7 +97,22 @@ namespace element_manager
                         MySqlCommand cmd = new MySqlCommand(sql, myConn);
                         cmd.ExecuteNonQuery();
 
-                        MessageBox.Show("회원가입에 성공하였습니다");
+
+
+                        if (op_checkbox.Checked)
+                        {
+                            string sql2 = "INSERT INTO op_signup (user_id, confirm_kno) VALUES('" +
+                                SU_ID_text.Text + "', '처리대기');";
+
+                            MySqlCommand cmd2 = new MySqlCommand(sql2, myConn);
+                            cmd2.ExecuteNonQuery();
+
+                            MessageBox.Show("사용자 계정 생성이 완료되었습니다.\n운용자 전환 : 관리자 승인을 대기중입니다.");
+                        }
+
+                        else
+                            MessageBox.Show("회원가입에 성공하였습니다");
+
                         Login.Show();
                         this.Hide();
                     }

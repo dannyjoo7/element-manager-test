@@ -51,6 +51,8 @@
             this.SU_Email_text = new System.Windows.Forms.TextBox();
             this.SU_email_label = new System.Windows.Forms.Label();
             this.SignUp_Btn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.op_checkbox = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -215,7 +217,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(28, 511);
+            this.label1.Location = new System.Drawing.Point(28, 517);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 27);
@@ -228,7 +230,7 @@
             this.SU_man_rb.AutoSize = true;
             this.SU_man_rb.Checked = true;
             this.SU_man_rb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SU_man_rb.Location = new System.Drawing.Point(72, 556);
+            this.SU_man_rb.Location = new System.Drawing.Point(224, 511);
             this.SU_man_rb.Margin = new System.Windows.Forms.Padding(4);
             this.SU_man_rb.Name = "SU_man_rb";
             this.SU_man_rb.Size = new System.Drawing.Size(72, 33);
@@ -242,7 +244,7 @@
             // 
             this.SU_woman_rb.AutoSize = true;
             this.SU_woman_rb.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SU_woman_rb.Location = new System.Drawing.Point(257, 556);
+            this.SU_woman_rb.Location = new System.Drawing.Point(316, 511);
             this.SU_woman_rb.Margin = new System.Windows.Forms.Padding(4);
             this.SU_woman_rb.Name = "SU_woman_rb";
             this.SU_woman_rb.Size = new System.Drawing.Size(72, 33);
@@ -254,7 +256,7 @@
             // SU_Addr_text
             // 
             this.SU_Addr_text.Font = new System.Drawing.Font("맑은 고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SU_Addr_text.Location = new System.Drawing.Point(28, 861);
+            this.SU_Addr_text.Location = new System.Drawing.Point(29, 798);
             this.SU_Addr_text.Margin = new System.Windows.Forms.Padding(4);
             this.SU_Addr_text.Name = "SU_Addr_text";
             this.SU_Addr_text.Size = new System.Drawing.Size(367, 52);
@@ -264,7 +266,7 @@
             // 
             this.SU_addr_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SU_addr_label.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SU_addr_label.Location = new System.Drawing.Point(28, 831);
+            this.SU_addr_label.Location = new System.Drawing.Point(29, 768);
             this.SU_addr_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SU_addr_label.Name = "SU_addr_label";
             this.SU_addr_label.Size = new System.Drawing.Size(48, 27);
@@ -275,7 +277,7 @@
             // SU_Phone_text
             // 
             this.SU_Phone_text.Font = new System.Drawing.Font("맑은 고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SU_Phone_text.Location = new System.Drawing.Point(28, 761);
+            this.SU_Phone_text.Location = new System.Drawing.Point(29, 698);
             this.SU_Phone_text.Margin = new System.Windows.Forms.Padding(4);
             this.SU_Phone_text.Name = "SU_Phone_text";
             this.SU_Phone_text.Size = new System.Drawing.Size(367, 52);
@@ -285,7 +287,7 @@
             // 
             this.SU_phone_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SU_phone_label.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SU_phone_label.Location = new System.Drawing.Point(28, 731);
+            this.SU_phone_label.Location = new System.Drawing.Point(29, 668);
             this.SU_phone_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SU_phone_label.Name = "SU_phone_label";
             this.SU_phone_label.Size = new System.Drawing.Size(60, 27);
@@ -296,7 +298,7 @@
             // SU_Email_text
             // 
             this.SU_Email_text.Font = new System.Drawing.Font("맑은 고딕", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SU_Email_text.Location = new System.Drawing.Point(28, 660);
+            this.SU_Email_text.Location = new System.Drawing.Point(29, 597);
             this.SU_Email_text.Margin = new System.Windows.Forms.Padding(4);
             this.SU_Email_text.Name = "SU_Email_text";
             this.SU_Email_text.Size = new System.Drawing.Size(367, 52);
@@ -306,7 +308,7 @@
             // 
             this.SU_email_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SU_email_label.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.SU_email_label.Location = new System.Drawing.Point(28, 629);
+            this.SU_email_label.Location = new System.Drawing.Point(29, 566);
             this.SU_email_label.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SU_email_label.Name = "SU_email_label";
             this.SU_email_label.Size = new System.Drawing.Size(104, 27);
@@ -328,11 +330,36 @@
             this.SignUp_Btn.UseVisualStyleBackColor = false;
             this.SignUp_Btn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(29, 889);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 27);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "운용자신청";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // op_checkbox
+            // 
+            this.op_checkbox.AutoSize = true;
+            this.op_checkbox.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.op_checkbox.Location = new System.Drawing.Point(314, 885);
+            this.op_checkbox.Name = "op_checkbox";
+            this.op_checkbox.Size = new System.Drawing.Size(74, 32);
+            this.op_checkbox.TabIndex = 25;
+            this.op_checkbox.Text = "신청";
+            this.op_checkbox.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(424, 1067);
+            this.Controls.Add(this.op_checkbox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.SignUp_Btn);
             this.Controls.Add(this.SU_Addr_text);
             this.Controls.Add(this.SU_addr_label);
@@ -387,5 +414,7 @@
         private TextBox SU_Email_text;
         private Label SU_email_label;
         private Button SignUp_Btn;
+        private Label label2;
+        private CheckBox op_checkbox;
     }
 }
