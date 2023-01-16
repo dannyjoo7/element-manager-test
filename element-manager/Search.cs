@@ -97,6 +97,7 @@ namespace element_manager
                             }
                             // ele.Eletag = tag;
                             ele.Eletag = tag.Substring(0, tag.Length-2);
+                            ele.main = main;
                             searchPanel.Controls.Add(ele);
                             reader.Close();
                         }

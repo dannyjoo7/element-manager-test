@@ -41,9 +41,10 @@
             // picture
             // 
             this.picture.BackColor = System.Drawing.Color.Transparent;
-            this.picture.Location = new System.Drawing.Point(10, 10);
+            this.picture.Location = new System.Drawing.Point(13, 13);
+            this.picture.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(80, 80);
+            this.picture.Size = new System.Drawing.Size(103, 107);
             this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture.TabIndex = 0;
             this.picture.TabStop = false;
@@ -52,38 +53,43 @@
             // lblName
             // 
             this.lblName.Font = new System.Drawing.Font("맑은 고딕", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(118, 15);
+            this.lblName.Location = new System.Drawing.Point(152, 20);
+            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(564, 25);
+            this.lblName.Size = new System.Drawing.Size(725, 33);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "username";
             // 
             // lblCompany
             // 
             this.lblCompany.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.lblCompany.Location = new System.Drawing.Point(121, 46);
+            this.lblCompany.Location = new System.Drawing.Point(156, 61);
+            this.lblCompany.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompany.Name = "lblCompany";
-            this.lblCompany.Size = new System.Drawing.Size(560, 15);
+            this.lblCompany.Size = new System.Drawing.Size(720, 20);
             this.lblCompany.TabIndex = 2;
             this.lblCompany.Text = "company";
             // 
             // btnInfo
             // 
             this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInfo.Location = new System.Drawing.Point(597, 70);
+            this.btnInfo.Location = new System.Drawing.Point(768, 93);
+            this.btnInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(75, 23);
+            this.btnInfo.Size = new System.Drawing.Size(96, 31);
             this.btnInfo.TabIndex = 3;
-            this.btnInfo.Text = "Info";
+            this.btnInfo.Text = "거절";
             this.btnInfo.UseVisualStyleBackColor = true;
+            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
             // 
             // btnPermit
             // 
             this.btnPermit.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnPermit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPermit.Location = new System.Drawing.Point(678, 70);
+            this.btnPermit.Location = new System.Drawing.Point(872, 93);
+            this.btnPermit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPermit.Name = "btnPermit";
-            this.btnPermit.Size = new System.Drawing.Size(75, 23);
+            this.btnPermit.Size = new System.Drawing.Size(96, 31);
             this.btnPermit.TabIndex = 4;
             this.btnPermit.Text = "승인";
             this.btnPermit.UseVisualStyleBackColor = false;
@@ -94,13 +100,14 @@
             this.panel1.BackColor = System.Drawing.Color.Teal;
             this.panel1.Controls.Add(this.picture);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(100, 100);
+            this.panel1.Size = new System.Drawing.Size(129, 133);
             this.panel1.TabIndex = 5;
             // 
             // UserList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -109,8 +116,9 @@
             this.Controls.Add(this.btnInfo);
             this.Controls.Add(this.lblCompany);
             this.Controls.Add(this.lblName);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UserList";
-            this.Size = new System.Drawing.Size(760, 100);
+            this.Size = new System.Drawing.Size(977, 133);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);

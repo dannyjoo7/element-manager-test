@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,17 +21,32 @@ namespace element_manager
 
         public void populateItems()
         {
-            UserList[] UserLists = new UserList[20];
-            for (int i=0; i<UserLists.Length; i++)
+            try
             {
-                UserLists[i] = new UserList();
-                // to-do
-                //if (flowLayoutPanel1.Controls.Count > 0)
-                //{
-                //    flowLayoutPanel1.Controls.Clear();
-                //}
-                //else
-                flowLayoutPanel1.Controls.Add(UserLists[i]);
+                List<UserList> uList = new List<UserList>();
+
+                using (MySqlConnection Conn = new MySqlConnection("Server = 127.0.0.1; Port=3306; Database=pbl; Uid=root; Pwd=1234;"))
+                {
+                    Conn.Open();
+                    string sql = "select user_id from op_signup;";
+                    MySqlCommand cmd = new MySqlCommand(sql, Conn);
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            UserList userlist = new UserList();
+                            userlist.Username = reader.GetString(0);
+                            Console.WriteLine(userlist.Username);
+                            uList.Add(userlist);
+                            flowLayoutPanel1.Controls.Add(userlist);
+                        }
+                        reader.Close();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
