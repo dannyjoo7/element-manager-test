@@ -95,7 +95,7 @@ namespace element_manager
 
 
                 myConn.Open();
-                string sql = "DELETE FROM op_signup WHERE user_id = " + lblName.Text + "';";
+                string sql = "DELETE FROM op_signup WHERE user_id = '" + lblName.Text + "';";
                 MySqlCommand cmd = new MySqlCommand(sql, myConn);
                 cmd.ExecuteReader();
                 MessageBox.Show("운용자 계정 변경신청을 거부하였습니다.");

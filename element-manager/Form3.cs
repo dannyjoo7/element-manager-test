@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Asn1.Cmp;
 using System;
 using System.Collections.Generic;
@@ -109,8 +110,47 @@ namespace element_manager
 
         private void btnPermit_Click(object sender, EventArgs e)
         {
-            changeColorBtnBackground(btnPermit);
-            changeForm(UserPermit);
+            Console.WriteLine(sid);
+            int check;
+
+            try
+            {
+                //DB연결 정보
+                string myConnection = "Server = 127.0.0.1; Port=3306; Database=pbl; Uid=root; Pwd=1234;";
+                //연결문 선언
+                MySqlConnection myConn = new MySqlConnection(myConnection);
+
+
+                myConn.Open();
+                string sql = "SELECT op_check FROM user WHERE user_id = '" + sid + "';";
+                MySqlCommand cmd = new MySqlCommand(sql, myConn);
+
+                MySqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+
+                check = reader.GetInt32(0);
+
+                if (check == 3)
+                {
+                    changeColorBtnBackground(btnPermit);
+                    changeForm(UserPermit);
+                    reader.Close();
+                }
+
+                else
+                {
+                    MessageBox.Show("권한이 없습니다.");
+                    reader.Close();
+                }
+
+
+                myConn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void panelInf_Paint(object sender, PaintEventArgs e)
